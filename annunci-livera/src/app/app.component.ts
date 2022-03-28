@@ -14,10 +14,12 @@ export class AppComponent {
     this.annunci = [];
   }
 
-  inVia(email: HTMLInputElement, telefono: HTMLInputElement, message: HTMLInputElement): boolean {
-    this.annunci.push(new Annunci(email.value, telefono.value, message.value));
+  inVia(name: HTMLInputElement, telefono: HTMLInputElement, message: HTMLInputElement): boolean {
+    this.annunci.push(new Annunci(name.value, telefono.value, message.value));
     console.log(this.annunci)
- 
+    name.value = '';
+    telefono.value = '';
+    message.value = '';
     return false;
 
   }

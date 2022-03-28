@@ -1,17 +1,23 @@
-<div>
+<div class="container">
   <div>
-    <input type="text" name="name" #newName>
-    <label for="name">Nome: </label>
+    <br><br><br><br>
+    <input type="text" name="name" #newName  class="form-control">
+    <label for="name">: Nome</label>
+    <br>
   </div>
   <div>
-    <input type="text" name="telefono" #newNumber>
-    <label for="pnumber">Telefono: </label>
+    <input type="text" name="telefono" #newNumber  class="form-control">
+    <label for="pnumber"> :Telefono</label>
+    <br>
   </div>
   <div>
-    <input type="text" name="message" #newMessaggio>
-    <label for="">Mesaggio</label>
+    <input type="text" name="message" #newMessaggio  class="form-control">
+    <label for=""> :Mesaggio</label>
+    <br>
   </div>
+  <br>
+  <button (click)="inVia(newName, newNumber,newMessaggio)" class="btn btn-danger">Invia</button>
 </div>
-<button (click)="inVia(newName, newNumber,newMessaggio)">Invia</button>
+
 
 <app-annunci-comp *ngFor="let vet of annunci" [vet]="vet"></app-annunci-comp>

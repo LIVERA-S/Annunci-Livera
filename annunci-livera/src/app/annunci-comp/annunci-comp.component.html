@@ -1,1 +1,22 @@
-<h4>{{vet.name}} - {{vet.telefono}} - {{vet.message}}</h4>
+<div class="container">
+    <button *ngIf="!show" (click)="Espn()" >Espandi</button>
+    <button  *ngIf="show" (click)="Espn()" >Chiudi</button>
+    <br><br>
+    <div *ngIf="show">
+        <div>
+            <label for="name">Risposta: </label>
+            <input type="text" name="risposta" #newRisposta>    
+        </div>
+        <div>
+            <label for="pnumber">Telefono: </label>
+            <input type="text" name="telefono" #newteTefono1><br>
+        </div>
+        <br><br>
+        <button (click)="Ans(newRisposta ,newteTefono1)">Rispondi</button>
+    </div>
+</div>
+<h5>{{vet.name}}, <br>{{vet.message}}. <br> {{vet.telefono}} </h5>
+
+
+
+<app-comment-comp *ngFor="let vet2 of risposte" [vet2]="vet2"></app-comment-comp>
