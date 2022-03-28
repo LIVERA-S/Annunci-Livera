@@ -4,7 +4,7 @@
     <label for="name">Nome: </label>
   </div>
   <div>
-    <input type="text" name="pnumber" #newNumber>
+    <input type="text" name="telefono" #newNumber>
     <label for="pnumber">Telefono: </label>
   </div>
   <div>
@@ -13,3 +13,5 @@
   </div>
 </div>
 <button (click)="inVia(newName, newNumber,newMessaggio)">Invia</button>
+
+<app-annunci-comp *ngFor="let vet of annunci" [vet]="vet"></app-annunci-comp>
