@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Annunci } from '../app/annunci.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
