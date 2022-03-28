@@ -8,7 +8,8 @@
     <label for="pnumber">Telefono: </label>
   </div>
   <div>
-    <input type="text" name="message" #newMesaggio>
+    <input type="text" name="message" #newMessaggio>
     <label for="">Mesaggio</label>
   </div>
 </div>
+<button (click)="inVia(newName, newNumber,newMessaggio)">Invia</button>
